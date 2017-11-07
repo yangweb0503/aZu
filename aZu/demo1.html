@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style type="text/css">
+		#stage{
+			width: 800px;
+			height: 500px;
+			margin:50px auto;
+			position: relative;
+			
+			perspective: 800px;
+			transition: all 10s linear;
+		}
+		#stage:hover .box1{
+			transform: rotateZ(180deg) rotatex(180deg) rotatey(180deg);
+		}
+		.box1{
+			transition: all 10s;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 0;right: 0;bottom: 0;left: 0;
+			margin:auto;
+			transform-style: preserve-3d;
+		}
+		.box1>img{
+			width:200px;
+			height:200px;
+			position: absolute;
+			top: 0;left: 0;
+			opacity: 0.8;
+		}
+		.box1 .top{transform: rotateX(90deg) translateZ(200px);}
+		.box1 .bottom{transform: rotateX(90deg) translateZ(-200px);}
+		.box1 .left{transform: rotateY(90deg) translateZ(-200px);}
+		.box1 .right{transform: rotatey(90deg) translateZ(200px);}
+		.box1 .before{transform:translateZ(200px);}
+		.box1 .after{transform: translateZ(-200px);}
+		
+		.box2 img{
+			width:100px;
+			height:100px;
+			position: absolute;
+			top: 50px;left: 50px;
+			
+			
+		}
+		.box2 .top{transform: rotateX(90deg) translateZ(50px);}
+		.box2 .bottom{transform: rotateX(90deg) translateZ(-50px);}
+		.box2 .left{transform: rotateY(90deg) translateZ(-50px);}
+		.box2 .right{transform: rotatey(90deg) translateZ(50px);}
+		.box2 .before{transform:translateZ(50px);}
+		.box2 .after{transform: translateZ(-50px);}
+		
+		
+	</style>
+	
+	
+	</head>
+	<body>
+		<div id="stage">		
+			<div class="box1">
+				<img class="top" src="img/yan1.jpg"/>
+				<img class="bottom" src="img/yan2.jpg"/>
+				<img class="left" src="img/yan3.jpg"/>
+				<img class="right" src="img/yan4.jpg"/>
+				<img class="before" src="img/yan5.jpg"/>
+				<img class="after" src="img/yan7.jpg"/>
+			
+				<div class="box2">
+					<img class="top" src="img/yan1.jpg"/>
+					<img class="bottom" src="img/yan2.jpg"/>
+					<img class="left" src="img/yan3.jpg"/>
+					<img class="right" src="img/yan4.jpg"/>
+					<img class="before" src="img/yan5.jpg"/>
+					<img class="after" src="img/yan7.jpg"/>
+				</div>
+			
+			</div>
+		</div>
+	</body>
+</html>
